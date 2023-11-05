@@ -6,6 +6,7 @@ import 'package:first_app/profiles/drawar/account_setting.dart';
 import 'package:first_app/profiles/drawar/contact.dart';
 import 'package:first_app/profiles/drawar/counselling.dart';
 import 'package:first_app/profiles/drawar/edit_profile.dart';
+import 'package:first_app/profiles/feedback/reference.dart';
 import 'package:flutter/material.dart';
 
 import 'feedback/feedback_page.dart';
@@ -382,6 +383,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     tileColor: _currentIndex == 7 ? Colors.grey : null,
                     onTap: () {
+                       Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProjectReferencePage()));
                       setState(() {
                         _currentIndex = 7; // Update the selected index
                       });
