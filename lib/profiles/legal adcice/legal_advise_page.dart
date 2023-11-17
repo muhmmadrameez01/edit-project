@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_import, must_be_immutable, library_private_types_in_public_api, unnecessary_import, unused_element, sort_child_properties_last, override_on_non_overriding_member, camel_case_types
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, unused_import, must_be_immutable, library_private_types_in_public_api, unnecessary_import, unused_element, sort_child_properties_last, override_on_non_overriding_member
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PhysiatristAdvicePage(),
+      home: LegalAdvicePage(),
     );
   }
 }
 
-class PhysiatristAdvicePage extends StatelessWidget {
-  List names = ["Phychiatrist1", "Phychiatrist2", "Phychiatrist3", "Phychiatrist4", "Phychiatrist5"];
+class LegalAdvicePage extends StatelessWidget {
+  List names = ["Lawyer1", "Lawyer2", "Lawyer3", "lawyer4", "lawyer5"];
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +26,11 @@ class PhysiatristAdvicePage extends StatelessWidget {
       initialIndex: 1, // Set the initial index to Lawyer List
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Phychiatrist Advise'),
+          title: Text('Legal Advice'),
           bottom: TabBar(
             tabs: [
-              Tab(text: 'Phychiatrists'),
-              Tab(text: 'Guidance'),
+              Tab(text: 'Lawyer List'),
+              Tab(text: 'Awareness'),
               Tab(text: 'FAQ'),
             ],
           ),
@@ -45,7 +45,7 @@ class PhysiatristAdvicePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/images/phychiatric.png', // Replace with the path to your image
+                    'assets/images/lawyer_pic.jpeg', // Replace with the path to your image
                     height: 300.0,
                     width: 420.0,
                     fit: BoxFit.cover,
@@ -129,10 +129,10 @@ Container(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 500,
+          width: double.infinity,
           child: Image.asset(
-            'assets/images/mental.jpg',
-            height: 250,
+            'assets/images/aware1.jpeg',
+            height: 300,
             fit: BoxFit.cover,
           ),
         ),
@@ -143,12 +143,12 @@ Container(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Guidance',
+                'Legal Awareness',
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 5.0),
               Text(
-                'Psychiatrists play a vital role in aiding domestic violence victims by providing specialized mental health care. Through therapeutic methods like cognitive-behavioral therapy and trauma-focused interventions, they address the psychological impact of abuse, collaborating with other professionals to create personalized treatment plans. With empathy and compassion, psychiatrists assist survivors in rebuilding self-worth, managing trauma symptoms, and developing coping mechanisms. They may also prescribe medications when necessary, contributing significantly to the holistic recovery of victims and empowering them to regain control over their lives.',
+                'Legal advice on domestic violence is crucial for individuals facing such issues. It is essential to know your rights and seek help from legal professionals. If you are experiencing domestic violence, consider reaching out to a lawyer for guidance and support. Understanding the legal aspects of your situation can empower you to take necessary actions and protect yourself. A knowledgeable attorney can provide insights into available legal remedies and help you navigate the legal system effectively. Seek legal advice promptly to address your concerns and safeguard your rights.',
                 style: TextStyle(fontSize: 16.0),
               ),
             ],
@@ -169,63 +169,72 @@ Container(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         FAQItem(
-          question: 'How do psychiatrists assist victims of domestic violence?',
+          question: 'What is the role of a lawyer in domestic violence cases?',
           answer:
-              'Psychiatrists support victims through specialized mental health care, using therapeutic approaches like cognitive-behavioral therapy and trauma-focused interventions to address the psychological impact of abuse.',
+              'Lawyers play a crucial role in domestic violence cases by providing legal advice, representing clients in court, and helping them navigate the legal system. They can assist in obtaining restraining orders, filing charges against the abuser, and ensuring the victim\'s rights are protected. Lawyers also work towards securing justice for victims and holding perpetrators accountable for their actions.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'What services do psychiatrists provide for domestic violence survivors?',
+          question: 'How can a lawyer help in obtaining a restraining order?',
           answer:
-              'Psychiatrists offer a range of services, including counseling, trauma management, and personalized treatment plans to help survivors navigate the emotional aftermath of domestic violence.',
+              'Obtaining a restraining order is a legal process that involves filing the necessary paperwork, presenting evidence of the domestic violence, and attending court hearings. A lawyer can guide individuals through this process, ensuring all legal requirements are met. They can also represent the victim in court, presenting a strong case for the issuance of a restraining order to protect them from further harm.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'Do psychiatrists collaborate with other professionals in the field?',
+          question: 'What legal remedies are available for domestic violence victims?',
           answer:
-              'Yes, psychiatrists collaborate with healthcare professionals, social workers, and support networks to create comprehensive treatment plans tailored to the unique needs of domestic violence survivors.',
+              'Domestic violence victims have various legal remedies available, including obtaining restraining orders, filing criminal charges against the abuser, and seeking compensation through civil lawsuits. A lawyer can assess the individual case, explain the available options, and help victims choose the most appropriate legal path based on their circumstances.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'How can psychiatrists help in rebuilding self-worth and resilience?',
+          question: 'Can a lawyer help in child custody cases related to domestic violence?',
           answer:
-              'Through compassionate and empathetic approaches, psychiatrists assist victims in rebuilding their sense of self-worth, managing trauma-related symptoms, and developing coping mechanisms for long-term mental well-being.',
+              'Yes, a lawyer can provide assistance in child custody cases related to domestic violence. They can help gather evidence, present the case in court, and advocate for the safety and well-being of the child. The court will consider the best interests of the child when making custody decisions, and a lawyer can play a crucial role in ensuring a positive outcome.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'Do psychiatrists prescribe medications to address mental health issues?',
+          question: 'Is legal aid available for victims of domestic violence?',
           answer:
-              'Yes, psychiatrists may prescribe medications to address issues like anxiety, depression, or post-traumatic stress disorder that often accompany experiences of domestic violence.',
+              'Yes, legal aid is often available for victims of domestic violence. Many organizations and law firms provide pro bono services or legal assistance at reduced rates for individuals facing domestic violence issues. Victims can reach out to local legal aid organizations or shelters to inquire about available legal support.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'Are the services of psychiatrists confidential?',
+          question: 'What steps should be taken immediately if someone is a victim of domestic violence?',
           answer:
-              'Yes, confidentiality is a priority, and psychiatrists take measures to ensure the privacy and safety of individuals seeking mental health support for domestic violence.',
+              'If someone is a victim of domestic violence, the immediate steps include ensuring their safety and seeking medical attention if necessary. It is crucial to contact law enforcement to report the incident and file a complaint. Additionally, reaching out to a lawyer or a domestic violence hotline can provide guidance on legal options and resources available for protection.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed
           },
         ),
         FAQItem(
-          question: 'How do psychiatrists contribute to the overall recovery and empowerment of survivors?',
+          question: 'Can a lawyer help in obtaining a protective order for the victim?',
           answer:
-              'Psychiatrists play a crucial role in the holistic recovery of survivors by fostering resilience, empowering them to regain control over their lives, and providing the necessary mental health tools for a fresh start.',
+              'Yes, a lawyer can assist in obtaining a protective order, also known as a restraining order, for the victim. They can guide the victim through the legal process, help gather evidence of the domestic violence, and represent them in court. A protective order aims to restrict the abuser from contacting or approaching the victim, providing an additional layer of legal protection.',
+          isExpanded: false,
+          onExpansionChanged: (value) {
+            // Handle expansion state change if needed
+          },
+        ),
+        FAQItem(
+          question: 'What role does evidence play in domestic violence cases?',
+          answer:
+              'Evidence plays a crucial role in domestic violence cases. It can include medical records, photographs, text messages, and witness statements. A lawyer can help the victim collect and present relevant evidence in court to support their case. Strong evidence strengthens the legal position and increases the likelihood of obtaining a favorable outcome.',
           isExpanded: false,
           onExpansionChanged: (value) {
             // Handle expansion state change if needed

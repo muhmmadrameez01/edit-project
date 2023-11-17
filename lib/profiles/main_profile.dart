@@ -7,11 +7,12 @@ import 'package:first_app/profiles/drawar/contact.dart';
 import 'package:first_app/profiles/drawar/counselling.dart';
 import 'package:first_app/profiles/drawar/edit_profile.dart';
 import 'package:first_app/profiles/feedback/reference.dart';
+import 'package:first_app/profiles/legal%20adcice/legal_advise_page.dart';
 import 'package:flutter/material.dart';
 
 import 'feedback/feedback_page.dart';
 import 'help and support/help_and_support.dart';
-import 'legal adcice/legal_advice_page.dart';
+//import 'legal adcice/legal_advice_page.dart';
 
 import 'ngo advice/ngo_advise_page.dart';
 import 'physiatrist advice/psychiatric_advice_page.dart';
@@ -124,25 +125,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         switch (index) {
                           case 0:
                             // Legal Advise
-                            Navigator.push(
+                           Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => LegalAdviceApp()));
+                                    builder: (context) => LegalAdvicePage()));
                             break;
                           case 1:
-                            // NGOs Advise
+                           //  NGOs Advise
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => NgoAdviseApp()));
+                                 builder: (context) => ngoAdvicePage()));
                             break;
                           case 2:
                             // physiatrist Advise
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        PsychiatricAdviceApp()));
+                           Navigator.push(
+                               context,
+                               MaterialPageRoute(
+                                   builder: (context) =>
+                                      PhysiatristAdvicePage()));
                             break;
                           case 3:
                             // Counselling

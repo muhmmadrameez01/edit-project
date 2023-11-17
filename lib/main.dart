@@ -2,7 +2,6 @@
 
 import 'package:first_app/profiles/welcome/welcome.dart';
 import 'package:flutter/material.dart';
-
 import 'profiles/main_profile.dart';
 
 void main() => runApp(MaterialApp(
